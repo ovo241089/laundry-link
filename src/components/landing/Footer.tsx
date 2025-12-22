@@ -216,7 +216,6 @@ const Footer = () => {
     </a>
   </div>
   <p className="text-gray-500 text-xs mt-3">
-    © {new Date().getFullYear()} Laundry Link. All rights reserved.
   </p>
 </footer>
         </div>
