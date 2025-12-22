@@ -185,7 +185,17 @@ const Footer = () => {
                 </svg>
               </a>
             </div>
-              <footer className="bg-gray-100 text-center py-6 border-t mt-8">
+              {/* eFADA Badge */}
+              <div className="mt-4 sm:mt-6 flex justify-center md:justify-start">
+                <div id="efadaDiv"></div>
+                <Script 
+                  src="https://service.moic.gov.bh/newefadaapi/api/Seal/image?s=https://www.laundrylink.net&sz=1"
+                  strategy="lazyOnload"
+                />
+              </div>
+            </nav>
+          </div>
+                        <footer className="bg-gray-100 text-center py-6 border-t mt-8">
   <div className="container mx-auto text-gray-600 text-sm space-x-4">
     <a
       href="https://www.laundrylink.net/terms-and-conditions"
@@ -209,16 +219,6 @@ const Footer = () => {
     © {new Date().getFullYear()} Laundry Link. All rights reserved.
   </p>
 </footer>
-              {/* eFADA Badge */}
-              <div className="mt-4 sm:mt-6 flex justify-center md:justify-start">
-                <div id="efadaDiv"></div>
-                <Script 
-                  src="https://service.moic.gov.bh/newefadaapi/api/Seal/image?s=https://www.laundrylink.net&sz=1"
-                  strategy="lazyOnload"
-                />
-              </div>
-            </nav>
-          </div>
         </div>
               <div className="mt-8 border-t border-gray-200 pt-6 text-center text-sm text-gray-500 sm:mt-12 sm:pt-8 sm:text-base lg:text-lg">
                 <p>
