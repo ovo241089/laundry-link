@@ -117,6 +117,13 @@ export default function RootLayout({
             gtag('config', 'AW-17645502549');
           `}
         </Script>
+<Script id="google-ads-page-view-conversion" strategy="afterInteractive">
+  {`
+    gtag('event', 'conversion', {
+      'send_to': 'AW-17645502549/QNKfCPu3jqlcENWAhN5B'
+    });
+  `}
+</Script>
       </head>
 
       <body className={`${inter.className} gradient-bg`}>
