@@ -289,7 +289,7 @@ function LoadingFallback() {
         </div>
       </div>
     </div>
-  );
+);
 }
 
 export default function OrderSuccessPage({ params }: OrderSuccessPageProps) {
