@@ -1,6 +1,7 @@
 'use client';
 
 import { Suspense, use } from 'react';
+import Script from 'next/script';
 import MainLayout from '@/components/layouts/main-layout';
 import Link from 'next/link';
 import { useAuth } from '@/hooks/useAuth';
@@ -14,7 +15,15 @@ interface OrderSuccessPageProps {
 function OrderSuccessContent({ orderNumber }: { orderNumber: string }) {
   const { isAuthenticated, customer } = useAuth();
 
-  return (
+return (
+  <>
+    <Script id="google-ads-pickup-conversion" strategy="afterInteractive">
+      {`
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17645502549/6otQCKi4xKIcENWAhN5B'
+        });
+      `}
+    </Script>
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-16'>
       <div className='max-w-4xl mx-auto px-6 lg:px-8'>
         {/* Main Success Card */}
@@ -254,9 +263,9 @@ function OrderSuccessContent({ orderNumber }: { orderNumber: string }) {
           </div>
         </div>
       </div>
-    </div>
-  );
-}
+       </div>
+  </>
+);
 
 function LoadingFallback() {
   return (
